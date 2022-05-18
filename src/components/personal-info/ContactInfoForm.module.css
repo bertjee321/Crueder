@@ -1,0 +1,37 @@
+.form--control {
+  margin: 0.5rem;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+
+.form--control label,
+.form--control input {
+  display: block;
+}
+
+.form--control label {
+  font-weight: bold;
+  font-size: 13px;
+  flex: 1;
+  max-width: 25%;
+  color: black;
+  padding: 0.2rem 0.2rem;
+}
+
+.form--control input {
+  flex: 3;
+  font: inherit;
+  font-size: 13px;
+  padding: 0.2rem 0.2rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form--actions {
+  text-align: right;
+}
+
+.form--actions Button {
+  margin: 0 0.5rem 0.5rem 0;
+}

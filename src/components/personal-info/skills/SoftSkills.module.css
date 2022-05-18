@@ -1,0 +1,27 @@
+.softskills {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 10%;
+    margin-right: 0.5rem;
+  }
+  
+  .softskills h4 {
+    margin: 0;
+  }
+  
+  .softskills p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 550;
+    padding: 5px 5px;
+    margin: 0;
+    word-spacing: 3px;
+  }
+
+  .line {
+    text-align: center;
+    margin: 5px auto;
+    background-color: rgba(0, 0, 0, 0.26);
+    height: 1px;
+    width: 75%;
+  }

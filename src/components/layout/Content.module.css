@@ -1,0 +1,14 @@
+.main--content {
+    display: flex;
+    flex-direction: row;
+}
+
+.content--left {
+    width: 40%;
+    padding-top: 3rem;
+}
+
+.content--right {
+    width: 60%;
+    padding-top: 0.5rem;
+}

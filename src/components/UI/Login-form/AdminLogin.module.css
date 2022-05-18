@@ -1,0 +1,62 @@
+.control {
+  margin: 1rem 0;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.control label,
+.control input {
+  display: block;
+}
+
+.control label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.control input:focus {
+  outline: none;
+  border-color: rgb(97, 97, 97);
+  background: #dacbcb4b;
+}
+
+.control.invalid input {
+  border-color: #e50914;
+  background: #fbdada;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  color: #221f1f;
+  border: 1px solid #221f1f;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 1s linear;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #09203f;
+  color: #f5f5f1;
+}
+
+.actions button:focus {
+  outline: none;
+}

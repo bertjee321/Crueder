@@ -8,13 +8,13 @@ const Timeline = (props) => {
   });
 
   const updateContentHandler = (data) => {
-    if (data.type === 'education') {
-      props.onEditEducation(data)
-    } else {
-      console.log(data.type, data.id)
-      return;
+    if (data.type === "education") {
+      props.onEditEducation(data);
     }
 
+    if (data.type === "job") {
+      props.onEditJobExperience(data);
+    }
   };
 
   return (

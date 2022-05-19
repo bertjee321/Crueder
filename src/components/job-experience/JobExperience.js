@@ -6,16 +6,24 @@ import AdminContext from "../../store/admin-context";
 import Button from "../UI/Button/Button";
 import Modal from "../UI/Modal/Modal";
 import AddJobExperienceForm from "./AddJobExperienceForm";
+import EditJobExperienceForm from "./EditJobExperienceForm";
 
 const JobExperience = () => {
   const adminCtx = useContext(AdminContext);
   const { sendRequest: fetchJobExperience } = useHttp();
-  // const {sendRequest: updateJobExperience = useHttp();
+  const { sendRequest: updateJobExperience } = useHttp();
   const { sendRequest: addJobExperience } = useHttp();
+  const [addActive, setAddActive] = useState(false);
   const [editActive, setEditActive] = useState(false);
   const [jobExperienceData, setJobExperienceData] = useState([]);
+  const [tempData, setTempData] = useState({});
 
-  const editHandler = () => {
+  const addHandler = () => {
+    setAddActive((prevState) => !prevState);
+  };
+
+  const editHandler = (data) => {
+    setTempData(data);
     setEditActive((prevState) => !prevState);
   };
 
@@ -47,12 +55,25 @@ const JobExperience = () => {
 
   const addJobExperienceHandler = (data) => {
     addJobExperience({
-      url: "https://digital-cv-8561c-default-rtdb.europe-west1.firebasedatabase.app/work-experience.json",
+      url: "https://digital-cv-8561c-default-rtdb.europe-west1.firebasedatabase.app/work-experience/",
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: data,
     });
-    editHandler();
+    addHandler();
+  };
+
+  const updateJobExperienceHandler = (id, data) => {
+    updateJobExperience({
+      url:
+        "https://digital-cv-8561c-default-rtdb.europe-west1.firebasedatabase.app/work-experience/" +
+        `${id}` +
+        ".json",
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: data,
+    });
+    editHandler({});
   };
 
   return (
@@ -63,19 +84,28 @@ const JobExperience = () => {
           <p style={{ textAlign: "center", margin: "0", fontSize: "10px" }}>
             Hover over for more info, click on field to edit
           </p>
-          <Button onClick={editHandler}>Add Job Experience</Button>
+          <Button onClick={addHandler}>Add Job Experience</Button>
         </div>
       ) : (
         <p style={{ textAlign: "center", margin: "0", fontSize: "10px" }}>
           Hover over for more info
         </p>
       )}
-      <Timeline data={jobExperienceData} />
-      {editActive && adminCtx.adminLogIn && (
-        <Modal onClose={editHandler}>
+      <Timeline data={jobExperienceData} onEditJobExperience={editHandler} />
+      {addActive && !editActive && adminCtx.adminLogIn && (
+        <Modal onClose={addHandler}>
           <AddJobExperienceForm
-            onClose={editHandler}
+            onClose={addHandler}
             onSubmit={addJobExperienceHandler}
+          />
+        </Modal>
+      )}
+      {!addActive && editActive && adminCtx.adminLogIn && (
+        <Modal onClose={editHandler}>
+          <EditJobExperienceForm
+            data={tempData}
+            onClose={editHandler}
+            onSubmit={updateJobExperienceHandler}
           />
         </Modal>
       )}

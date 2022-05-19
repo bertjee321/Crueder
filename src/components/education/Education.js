@@ -74,8 +74,7 @@ const Education = () => {
       headers: { "Content-Type": "application/json" },
       body: data,
     });
-    setTempData({});
-    editHandler();
+    editHandler({});
   };
 
   return (

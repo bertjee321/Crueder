@@ -26,7 +26,7 @@ const ContactInfoForm = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <div className={classes["form--control"]}>
-        <label htmlFor="phone">Phone Number</label>
+        <label htmlFor="phone">Phone</label>
         <input
           type="tel"
           id="phone"

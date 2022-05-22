@@ -17,7 +17,7 @@ const SummaryForm = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className={classes.summary}>
       <div className={classes["form--control"]}>
         <label htmlFor="summary">Summary</label>
         <textarea type="area" id="summary" defaultValue={props.data} ref={summaryRef} />

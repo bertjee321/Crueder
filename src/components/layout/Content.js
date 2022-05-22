@@ -14,11 +14,12 @@ const Content = () => {
         <ContactInfo />
         <Summary />
         <Education />
+        <SoftSkills />
       </div>
       <div className={classes["content--right"]}>
         <JobExperience />
         <ProfSkills />
-        <SoftSkills />
+        
       </div>
     </main>
   );

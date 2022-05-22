@@ -31,21 +31,20 @@
 .name h1 {
   margin: 0px;
   letter-spacing: 2px;
-  
 }
 
 .name h4 {
-    margin-top: 10px;
-    letter-spacing: 2px;
-  }
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-align: left;
+}
 
 .bar {
-    background-color: #ececec;
-    height: 3px;
-    margin-top: 5px;
-    width: 40%;
-    min-width: 250px;
-    max-width: 624px;
-    position: absolute;
-    
+  background-color: #ececec;
+  height: 3px;
+  margin-top: 5px;
+  width: 40%;
+  min-width: 250px;
+  max-width: 624px;
+  position: absolute;
 }

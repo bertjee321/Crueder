@@ -24,10 +24,10 @@ const Footer = (props) => {
     content = (
       <div>
         <p>Admin is logged in!</p>
-        <button>Click here to add, change or remove info</button>
-        <button onClick={adminLogoutHandler}>
-          Click here to log out as Admin
-        </button>
+        <p className={classes.clickable} onClick={adminLogoutHandler}>Click to log out</p>
+        <p style={{ marginTop: "10px", fontSize: "12px", fontStyle: "italic" }}>
+          2022 - Bert Kruiter
+        </p>
       </div>
     );
   } else {

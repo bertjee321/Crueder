@@ -6,10 +6,12 @@
 }
 
 .timeline-container::after {
-  background-color: #537895;
+  background-color: white;
   content: "";
   position: absolute;
-  left: calc(5%);
-  width: 4px;
+  border-radius: 6px;
+  border: 1px solid #537895;
+  right: 93%;
+  width: 2px;
   height: 100%;
 }

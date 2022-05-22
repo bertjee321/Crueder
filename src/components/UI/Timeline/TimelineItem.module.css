@@ -99,26 +99,14 @@
   align-self: center;
 }
 
-.circle {
+/* .circle {
   background-color: white;
   border: 3px solid #9fd3c7;
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 8px);
-  left: -7%;
+  left: -5%;
   width: 10px;
   height: 10px;
   z-index: 100;
-}
-
-@media(max-width: 1250px) {
-  .circle {
-    left: -9.75%;
-  }
-}
-
-@media(max-width: 950px) {
-  .circle {
-    left: -10%;
-  }
-}
+} */

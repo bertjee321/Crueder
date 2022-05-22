@@ -56,11 +56,11 @@ const ContactInfo = () => {
   let content;
   if (editActive && adminCtx.adminLogIn) {
     content = (
-      <ContactInfoForm
-        data={contactInfoData}
-        onCancelEdit={editHandler}
-        onSubmit={updateContactInfoHandler}
-      />
+        <ContactInfoForm
+          data={contactInfoData}
+          onCancelEdit={editHandler}
+          onSubmit={updateContactInfoHandler}
+        />
     );
   } else {
     content = (

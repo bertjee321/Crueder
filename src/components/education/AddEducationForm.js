@@ -22,7 +22,6 @@ const AddEducationForm = (props) => {
       description: descriptionRef.current.value,
     };
 
-    console.log(data);
     props.onSubmit(data);
   };
 
